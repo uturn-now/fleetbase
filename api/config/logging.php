@@ -68,23 +68,23 @@ return [
             'days' => 14,
         ],
 
-        'slack' => [
-            'driver' => 'slack',
-            'url' => env('LOG_SLACK_WEBHOOK_URL'),
-            'username' => 'Laravel Log',
-            'emoji' => ':boom:',
-            'level' => env('LOG_LEVEL', 'critical'),
-        ],
+//         'slack' => [
+//             'driver' => 'slack',
+//             'url' => env('LOG_SLACK_WEBHOOK_URL'),
+//             'username' => 'Laravel Log',
+//             'emoji' => ':boom:',
+//             'level' => env('LOG_LEVEL', 'critical'),
+//         ],
 
-        'papertrail' => [
-            'driver' => 'monolog',
-            'level' => env('LOG_LEVEL', 'debug'),
-            'handler' => SyslogUdpHandler::class,
-            'handler_with' => [
-                'host' => env('PAPERTRAIL_URL'),
-                'port' => env('PAPERTRAIL_PORT'),
-            ],
-        ],
+//         'papertrail' => [
+//             'driver' => 'monolog',
+//             'level' => env('LOG_LEVEL', 'debug'),
+//             'handler' => SyslogUdpHandler::class,
+//             'handler_with' => [
+//                 'host' => env('PAPERTRAIL_URL'),
+//                 'port' => env('PAPERTRAIL_PORT'),
+//             ],
+//         ],
 
         'stderr' => [
             'driver' => 'monolog',

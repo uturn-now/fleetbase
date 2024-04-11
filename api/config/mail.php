@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'ses'),
+    'default' => env('MAIL_MAILER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -45,12 +45,12 @@ return [
             'auth_mode' => null,
         ],
 
-        'ses' => [
-            'transport' => 'ses',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
-        ],
+//         'ses' => [
+//             'transport' => 'ses',
+//             'key' => env('AWS_ACCESS_KEY_ID'),
+//             'secret' => env('AWS_SECRET_ACCESS_KEY'),
+//             'region' => env('AWS_DEFAULT_REGION'),
+//         ],
 
         'mailgun' => [
             'transport' => 'mailgun',
@@ -60,14 +60,14 @@ return [
             'transport' => 'postmark',
         ],
 
-        'sendgrid' => [
-            'transport' => 'sendgrid',
-        ],
-
-        'sendmail' => [
-            'transport' => 'sendmail',
-            'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -t -i'),
-        ],
+//         'sendgrid' => [
+//             'transport' => 'sendgrid',
+//         ],
+//
+//         'sendmail' => [
+//             'transport' => 'sendmail',
+//             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -t -i'),
+//         ],
 
         'log' => [
             'transport' => 'log',
